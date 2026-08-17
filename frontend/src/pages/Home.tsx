@@ -1,0 +1,2 @@
+import { SourceInput } from '../components/SourceInput'
+export function Home({onStart,busy,error}:{onStart:(text:string)=>void;busy:boolean;error:string}){return <main className="shell home"><div className="eyebrow">An attentive listening exercise</div><h1>Fallible Presenter</h1><p className="subtitle">Listen carefully. Your presenter may not always be right.</p>{error&&<div className="error" role="alert">{error}</div>}<SourceInput onStart={onStart} busy={busy}/></main>}
